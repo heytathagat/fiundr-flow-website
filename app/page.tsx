@@ -353,7 +353,7 @@ function ServicesSection() {
 
                   <CardContent className="p-10 relative z-10 flex flex-col justify-between h-full">
                     <div>
-                      <div className="flex items-start mb-8">
+                      <div className="flex items-start flex-col mb-8 md:flex-row">
                         <div
                           className={`p-4 rounded-3xl bg-gradient-to-br ${service.color} text-white mr-6 group-hover:scale-110 transition-transform duration-500 shadow-lg`}
                         >
@@ -361,7 +361,7 @@ function ServicesSection() {
                         </div>
 
                         <div className="flex-1">
-                          <h3 className="text-3xl font-bold text-black mb-4 group-hover:text-gray-800 transition-colors duration-300">
+                          <h3 className="text-3xl mt-2 md:mt-0 font-bold text-black mb-4 group-hover:text-gray-800 transition-colors duration-300">
                             {service.title}
                           </h3>
                           <p className="text-lg text-gray-600 leading-relaxed">{service.description}</p>
@@ -387,7 +387,7 @@ function ServicesSection() {
 
                     <Link href={service.href} className="block mt-auto">
                       <Button
-                        className={`w-full bg-gradient-to-r ${service.color} text-white hover:shadow-xl transition-all duration-300 transform group-hover:scale-105 rounded-full py-6 text-lg font-semibold`}
+                        className={`w-full bg-gradient-to-r ${service.color} text-white hover:shadow-xl transition-all duration-300 transform group-hover:scale-105 rounded-full py-0 -ml-5 md:py-6 md:-ml-0 text-sm md:text-lg font-semibold`}
                       >
                         Learn More About {service.title}
                         <ArrowUpRight className="ml-2 w-5 h-5" />
