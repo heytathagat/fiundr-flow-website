@@ -33,11 +33,12 @@ const TIME_SLOTS = [
 ]
 
 // Fake unavailable slots (in a real app, this would come from an API)
-const UNAVAILABLE_SLOTS = {
+const UNAVAILABLE_SLOTS: { [key: string]: string[] } = {
   "2025-06-05": ["09:00 AM", "09:30 AM", "02:00 PM"],
   "2025-06-06": ["11:00 AM", "11:30 AM", "03:30 PM"],
   "2025-06-07": ["10:00 AM", "01:00 PM", "04:00 PM"],
 }
+
 
 export function BookingWidget() {
   const [step, setStep] = useState(1)

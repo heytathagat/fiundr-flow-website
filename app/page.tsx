@@ -96,7 +96,7 @@ function HeroSection() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="relative w-full max-w-md">
                   {/* Card 1 */}
-                  <div className="absolute top-0 left-0 w-full transform -rotate-6 -translate-y-4 -translate-x-4 transition-all duration-500 hover:rotate-0 hover:translate-x-0 hover:translate-y-0 z-10">
+                  <div className="absolute top-0 left-0 w-full transform -rotate-6 -translate-y-20 -translate-x-4 transition-all duration-500 hover:rotate-0 hover:translate-x-0 hover:translate-y-0 z-10">
                     <Card className="bg-white border-0 shadow-2xl overflow-hidden">
                       <CardContent className="p-6">
                         <div className="flex items-center mb-4">
@@ -123,7 +123,7 @@ function HeroSection() {
                   </div>
 
                   {/* Card 2 */}
-                  <div className="absolute top-0 left-0 w-full transform rotate-3 translate-y-16 transition-all duration-500 hover:rotate-0 hover:translate-y-12 z-20">
+                  <div className="absolute top-0 left-0 w-full transform rotate-5 translate-y-30 transition-all duration-500 hover:rotate-0 hover:translate-y-12 z-20">
                     <Card className="bg-white border-0 shadow-2xl overflow-hidden">
                       <CardContent className="p-6">
                         <div className="flex items-center mb-4">
@@ -203,8 +203,8 @@ function HeroSection() {
                     SC
                   </div>
                   <div>
-                    <h3 className="font-bold text-white">Sarah Chen</h3>
-                    <p className="text-gray-300">Founder & CEO, TechFlow AI</p>
+                    <h3 className="font-bold text-white">Antriksh</h3>
+                    <p className="text-gray-300">Founder,Threat Nexus</p>
                   </div>
                 </div>
               </div>
@@ -345,46 +345,47 @@ function ServicesSection() {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {services.map((service, index) => (
-              <div key={index} className="group">
-                <Card className="h-full bg-white border border-gray-200 shadow-xl hover:shadow-3xl transition-all duration-700 transform group-hover:scale-[1.02] overflow-hidden relative">
-                  {/* Gradient overlay on hover */}
+              <div key={index} className="group h-full">
+                <Card className="h-full flex flex-col bg-white border border-gray-200 shadow-xl hover:shadow-3xl transition-all duration-700 transform group-hover:scale-[1.02] overflow-hidden relative">
                   <div
                     className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-700`}
                   ></div>
 
-                  <CardContent className="p-10 relative z-10">
-                    <div className="flex items-start mb-8">
-                      <div
-                        className={`p-4 rounded-3xl bg-gradient-to-br ${service.color} text-white mr-6 group-hover:scale-110 transition-transform duration-500 shadow-lg`}
-                      >
-                        {service.icon}
+                  <CardContent className="p-10 relative z-10 flex flex-col justify-between h-full">
+                    <div>
+                      <div className="flex items-start mb-8">
+                        <div
+                          className={`p-4 rounded-3xl bg-gradient-to-br ${service.color} text-white mr-6 group-hover:scale-110 transition-transform duration-500 shadow-lg`}
+                        >
+                          {service.icon}
+                        </div>
+
+                        <div className="flex-1">
+                          <h3 className="text-3xl font-bold text-black mb-4 group-hover:text-gray-800 transition-colors duration-300">
+                            {service.title}
+                          </h3>
+                          <p className="text-lg text-gray-600 leading-relaxed">{service.description}</p>
+                        </div>
                       </div>
 
-                      <div className="flex-1">
-                        <h3 className="text-3xl font-bold text-black mb-4 group-hover:text-gray-800 transition-colors duration-300">
-                          {service.title}
-                        </h3>
-                        <p className="text-lg text-gray-600 leading-relaxed">{service.description}</p>
-                      </div>
-                    </div>
-
-                    <div className="space-y-4 mb-8">
-                      <h4 className="text-lg font-semibold text-black">What's Included:</h4>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        {service.features.map((feature, i) => (
-                          <div key={i} className="flex items-start">
-                            <div
-                              className={`w-6 h-6 rounded-full bg-gradient-to-br ${service.color} flex items-center justify-center mr-3 mt-0.5 flex-shrink-0`}
-                            >
-                              <CheckCircle className="w-3 h-3 text-white" />
+                      <div className="space-y-4 mb-8">
+                        <h4 className="text-lg font-semibold text-black">What's Included:</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                          {service.features.map((feature, i) => (
+                            <div key={i} className="flex items-start">
+                              <div
+                                className={`w-6 h-6 rounded-full bg-gradient-to-br ${service.color} flex items-center justify-center mr-3 mt-0.5 flex-shrink-0`}
+                              >
+                                <CheckCircle className="w-3 h-3 text-white" />
+                              </div>
+                              <span className="text-gray-600 text-sm leading-relaxed">{feature}</span>
                             </div>
-                            <span className="text-gray-600 text-sm leading-relaxed">{feature}</span>
-                          </div>
-                        ))}
+                          ))}
+                        </div>
                       </div>
                     </div>
 
-                    <Link href={service.href} className="block">
+                    <Link href={service.href} className="block mt-auto">
                       <Button
                         className={`w-full bg-gradient-to-r ${service.color} text-white hover:shadow-xl transition-all duration-300 transform group-hover:scale-105 rounded-full py-6 text-lg font-semibold`}
                       >
@@ -395,6 +396,7 @@ function ServicesSection() {
                   </CardContent>
                 </Card>
               </div>
+
             ))}
           </div>
 
@@ -557,7 +559,7 @@ function CTASection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-black text-lg px-12 py-6 rounded-full transition-all duration-300 transform hover:scale-105"
+              className="border-2 border-white text-black hover:bg-white hover:text-black text-lg px-12 py-6 rounded-full transition-all duration-300 transform hover:scale-105"
               asChild
             >
               <Link href="/services">Explore Our Services</Link>
