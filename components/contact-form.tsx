@@ -13,16 +13,38 @@ export function ContactForm({ title = "Get in Touch", subtitle = "We'll get back
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setIsSubmitted(true)
-    }, 1500)
+  const data = {
+    firstName: (document.getElementById("firstName") as HTMLInputElement).value,
+    lastName: (document.getElementById("lastName") as HTMLInputElement).value,
+    email: (document.getElementById("email") as HTMLInputElement).value,
+    company: (document.getElementById("company") as HTMLInputElement).value,
+    message: (document.getElementById("message") as HTMLTextAreaElement).value,
+  };
+console.log("values",data);
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    if (res.ok) {
+      setIsSubmitted(true);
+    } else {
+      alert("Failed to send message.");
+    }
+  } catch (error) {
+    alert("Error sending message.");
+    console.error(error);
+  } finally {
+    setIsSubmitting(false);
   }
+};
+
 
   return (
     <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-500">
