@@ -349,7 +349,7 @@ function Testimonials() {
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-bold text-black mb-6">
             Success
-            <span className="block text-black">Stories</span>
+            <span className="inline text-black"> Stories</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Hear from founders who have transformed their startups through our mentorship program

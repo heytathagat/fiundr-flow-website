@@ -374,7 +374,7 @@ function PerformanceMetrics() {
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-bold text-black mb-6">
             Performance
-            <span className="block text-black">Metrics</span>
+            <span className="inline text-black"> Metrics</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Data-driven results from our pitch coaching program demonstrate consistent success across key metrics
