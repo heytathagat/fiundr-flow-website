@@ -91,8 +91,8 @@ function ValuesSection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-bold text-black mb-6">
-            Our Core
-            <span className="block text-black">Values</span>
+            Our Core Values
+            {/* <span className="inline text-black"> </span> */}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             The principles that guide everything we do at FoundrFlow
@@ -231,7 +231,7 @@ function StatsSection() {
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Our Impact
-            <span className="block text-gray-300">in Numbers</span>
+            <span className="inline text-gray-300"> in Numbers</span>
           </h2>
         </div>
 

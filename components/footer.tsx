@@ -98,14 +98,17 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-6 text-white">Contact</h4>
             <div className="space-y-4">
-              <div className="flex items-center space-x-3 text-gray-400">
+              <Link href={'mailto:hello@foundrflow.in'}>
+              <div className="flex items-center space-x-3 text-gray-400 mb-4">
                 <Mail className="w-5 h-5 text-white" />
                 <span>hello@foundrflow.in</span>
-              </div>
+              </div></Link>
+              <Link href={'tel:+919041095531'} className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-400">
                 <Phone className="w-5 h-5 text-white" />
                 <span>+91 90410-95531</span>
               </div>
+              </Link>
               <div className="flex items-start space-x-3 text-gray-400">
                 <MapPin className="w-5 h-5 text-white mt-1" />
                 <div>

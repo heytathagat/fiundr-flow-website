@@ -496,7 +496,7 @@ function ServiceCTA() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-black text-lg px-12 py-4 rounded-full transition-all duration-300 transform hover:scale-105"
+                className="border-2 border-white text-black hover:bg-white hover:text-black text-lg px-12 py-4 rounded-full transition-all duration-300 transform hover:scale-105"
               >
                 View All Services
               </Button>

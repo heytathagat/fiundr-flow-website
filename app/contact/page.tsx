@@ -19,7 +19,7 @@ function ContactHero() {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-black mb-8 animate-fade-in-up">
             Contact
-            <span className="block text-black">Us</span>
+            <span className="inline text-black"> Us</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Ready to accelerate your startup journey? Get in touch with our team and let's discuss how we can help you

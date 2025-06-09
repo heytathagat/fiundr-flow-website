@@ -204,7 +204,7 @@ function GrowthMethodology() {
                         {phase.icon}
                       </div>
                       <div>
-                        <div className="text-sm text-gray-500 font-medium">Step {phase.step}</div>
+                        <div className="text-sm text-gray font-medium">Step {phase.step}</div>
                         <h3 className="text-2xl font-bold text-black">{phase.title}</h3>
                         <div className="text-sm text-gray-600 flex items-center mt-1">
                           <Clock className="w-4 h-4 mr-1" />
@@ -295,7 +295,7 @@ function GrowthChannels() {
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-bold text-black mb-6">
             Growth
-            <span className="block text-black">Channels</span>
+            <span className="inline text-black"> Channels</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Multi-channel growth strategies tailored to your business model and target market
@@ -349,7 +349,7 @@ function SuccessMetrics() {
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-bold text-black mb-6">
             Proven
-            <span className="block text-black">Results</span>
+            <span className="inline text-black"> Results</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Real growth metrics achieved by startups in our growth acceleration program
@@ -460,7 +460,7 @@ function ServiceCTA() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-black text-lg px-12 py-4 rounded-full transition-all duration-300 transform hover:scale-105"
+                className="border-2 border-white text-black hover:bg-white hover:text-black text-lg px-12 py-4 rounded-full transition-all duration-300 transform hover:scale-105"
               >
                 View All Services
               </Button>
