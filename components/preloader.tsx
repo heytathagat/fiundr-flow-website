@@ -16,9 +16,9 @@ export function Preloader() {
           setTimeout(() => setFadeOut(true), 200)
           return 100
         }
-        return prev + 2
+        return prev + 4
       })
-    }, 50)
+    }, 60)
 
     return () => clearInterval(timer)
   }, [])

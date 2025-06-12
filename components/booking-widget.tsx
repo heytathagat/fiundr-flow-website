@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-
+import Swal from 'sweetalert2'
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Calendar } from "@/components/ui/calendar"
@@ -72,16 +72,40 @@ export function BookingWidget() {
   }
 
   // Handle form submission
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      const response = await fetch("/api/book-call", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          date,
+          timeSlot,
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error("Booking failed")
+      }
+
+      setStep(3) // Success step
+    } catch (error) {
+      console.error("Booking error:", error)
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+      });
+    } finally {
       setIsSubmitting(false)
-      setStep(3) // Move to confirmation step
-    }, 1500)
+    }
   }
+
 
   // Disable dates before today and weekends
   const disabledDays = (date: Date) => {
